@@ -37,6 +37,7 @@
 
     background = new PIXI.Graphics();
     background.beginFill(0xff0000);
+    background.lineStyle(2, 0x000000, 0.5);
     background.drawRect(LEFT_MARGIN, TOP_MARGIN, CANVAS_WIDTH, CANVAS_HEIGHT+17);
     background.endFill();
 
@@ -44,7 +45,6 @@
       for (j = 0; j < GRID_COL_COUNT; j++) {
         var grid = new PIXI.Graphics();
         grid.beginFill(0xFFFFFF);
-        grid.lineStyle(2, 0x000000, 0.1);
         grid_x = LEFT_MARGIN + j * GRID_WIDTH;
         grid_y = TOP_MARGIN + i * GRID_HEIGHT;
         grid.drawRect(grid_x, grid_y, GRID_WIDTH, GRID_HEIGHT);
